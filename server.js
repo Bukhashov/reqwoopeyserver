@@ -6,6 +6,10 @@ const app = express();
 const API_URL = "https://api.yii2-stage.test.wooppay.com";
 
 // Routes
+app.get('/', async (req, res) => {
+    res.send(<h1>https://reqwoopeyserver.herokuapp.com/</h1>)
+});
+
 app.post('/v1/auth', async (req, res) => {
     const login = req.login;
     const password = req.password;
